@@ -1,7 +1,128 @@
 {
+  "authentication": {
+    "getToken": {
+      "method": "POST",
+      "params": {
+        "mac": {
+          "required": true,
+          "type": "string"
+        },
+        "secret": {
+          "required": true,
+          "type": "string"
+        }
+      },
+      "url": "/authenticate?mac=:mac&secret=:secret"
+    }
+  },
+  "heartbeat": {
+    "send": {
+      "method": "POST",
+      "params": {
+        "AtmId": {
+          "required": true,
+          "type": "integer"
+        },
+        "Backend": {
+          "required": true,
+          "type": "string"
+        },
+        "Dataset": {
+          "required": true,
+          "type": "string"
+        },
+        "Firmware": {
+          "required": true,
+          "type": "string"
+        },
+        "HeartTime": {
+          "required": true,
+          "type": "string"
+        },
+        "Hostname": {
+          "required": true,
+          "type": "string"
+        },
+        "lastNV200": {
+          "required": true,
+          "type": "string"
+        },
+        "Latitude": {
+          "required": true,
+          "type": "string"
+        },
+        "LocalVersion": {
+          "required": true,
+          "type": "string"
+        },
+        "Longitude": {
+          "required": true,
+          "type": "string"
+        },
+        "NV200": {
+          "required": true,
+          "type": "object[]"
+        },
+        "PublicIp": {
+          "required": true,
+          "type": "string"
+        },
+        "publicKey": {
+          "required": true,
+          "type": "string"
+        },
+        "TimezoneOffset": {
+          "required": true,
+          "type": "string"
+        },
+        "Version": {
+          "required": true,
+          "type": "string"
+        },
+        "VPNIp": {
+          "required": true,
+          "type": "string"
+        }
+      }
+    }
+  },
   "customer": {
+    "create": {
+      "method": "POST",
+      "params": {
+        "atmId": {
+          "required": true,
+          "type": "integer"
+        },
+        "defaultLevel": {
+          "type": "integer"
+        },
+        "customerId": {
+          "required": true,
+          "type": "string"
+        },
+        "sms": {
+          "required": true,
+          "type": "string"
+        },
+        "snapshot": {
+          "type": "string"
+        }
+      },
+      "url": "/createCustomerWithSnapshot"
+    },
     "read": {
       "method": "GET",
+      "params": {
+        "custId": {
+          "required": true,
+          "type": "string"
+        }
+      },
+      "url": "/getCustomer/:custId"
+    },
+    "update": {
+      "method": "POST",
       "params": {
         "customerKey": {
           "required": true,
@@ -9,6 +130,18 @@
         }
       },
       "url": "/customer/:customerKey"
+    }
+  },
+  "config": {
+    "read": {
+      "method": "GET",
+      "params": {},
+      "url": "/config"
+    },
+    "update": {
+      "method": "POST",
+      "params": {},
+      "url": "/config/updat"
     }
   }
 }
