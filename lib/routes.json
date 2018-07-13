@@ -83,7 +83,8 @@
           "required": true,
           "type": "string"
         }
-      }
+      },
+      "url": "/heartbeat"
     }
   },
   "customer": {
