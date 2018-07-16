@@ -19,10 +19,6 @@
     "send": {
       "method": "POST",
       "params": {
-        "AtmId": {
-          "required": true,
-          "type": "integer"
-        },
         "Backend": {
           "required": true,
           "type": "string"
