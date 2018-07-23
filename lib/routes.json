@@ -23,7 +23,7 @@
           "required": true,
           "type": "string"
         },
-        "CurrentRecyclerCash ": {
+        "CurrentRecyclerCash": {
           "required": true,
           "type": "object"
         },
