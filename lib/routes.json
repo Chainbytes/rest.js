@@ -25,7 +25,7 @@
         },
         "CurrentRecyclerCash ": {
           "required": true,
-          "type": "object[]"
+          "type": "object"
         },
         "Dataset": {
           "required": true,
@@ -118,7 +118,7 @@
     "update": {
       "method": "POST",
       "params": {},
-      "url": "/config/updat"
+      "url": "/config/update"
     }
   }
 }
