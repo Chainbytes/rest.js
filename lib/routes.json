@@ -107,6 +107,24 @@
         }
       },
       "url": "/customer/:customerKey"
+    },
+    "serviceSignin": {
+      "method": "POST",
+      "params": {
+        "atmId": {
+          "required": true,
+          "type": "integer"
+        },
+        "serviceName": {
+          "required": true,
+          "type": "string"
+        },
+        "token": {
+          "required": true,
+          "type": "string"
+        }
+      },
+      "url": "/customer/service"
     }
   },
   "config": {
